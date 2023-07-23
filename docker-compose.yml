@@ -7,6 +7,8 @@ services:
     build: .
     volumes:
       - ./src:/var/www/html
+      - ./docker/server/apache/sites-enabled:/etc/apache2/sites-enabled
+      - ./docker/server/php/php.ini:/usr/local/etc/php/conf.d/extra-php-config.ini
     ports:
       - 9000:80
   
