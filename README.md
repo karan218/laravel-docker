@@ -53,7 +53,7 @@ make data
 
 8. Assuming you have not changed any details in the .env files you should be able to access 
 
-- [Laravel App](http://localhost:9000/public).
+- [Laravel App](http://localhost:9000).
 - [phpMyAdmin database admin](http://localhost:9001).
 
 9. Start coding :)
