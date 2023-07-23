@@ -11,6 +11,10 @@ PHP and MySQL do not need to be installed to run the software locally
 Installation
 ------------
 1. Clone respository
+```bash
+git clone https://github.com/karan218/laravel-docker.git
+cd laravel-docker
+```
 
 2. Copy .env.docker to .env with the following command
 ```bash
@@ -31,7 +35,7 @@ make setup
 
 5. Run the following commands to set up storage folder permission
 ```bash
-make folder_permission
+make folder-permission
 ```
 
 6. Update following details in src/.env files according to yours root .env files
