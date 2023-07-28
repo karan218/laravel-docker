@@ -30,6 +30,7 @@ MYSQL_ROOT_PASSWORD=you_mysql_root_password
 
 4. Run the following commands to setup docker enviorment
 ```bash
+sudo service mysql stop
 make setup
 ```
 

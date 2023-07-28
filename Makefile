@@ -14,8 +14,18 @@ composer-update:
 	docker exec laravel-docker bash -c "composer update"
 data:
 	docker exec laravel-docker bash -c "php artisan migrate:fresh --seed"
+migrate:
+	docker exec laravel-docker bash -c "php artisan migrate"
+key:
+	docker exec laravel-docker bash -c "php artisan key:generate"
+cache-clear:
+	docker exec laravel-docker bash -c "php artisan optimize:cl"
+passport:
+	docker exec laravel-docker bash -c "php artisan passport:install"
+test:
+	docker exec laravel-docker bash -c "php artisan test"
 stop:
 	docker-compose stop
 down:
-	docker-compose down
+	docker-compose down -v
 

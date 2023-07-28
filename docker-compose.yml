@@ -1,5 +1,8 @@
 version: "3.3"
 
+networks:
+  laravel_docker:
+
 services:
 
   laravel-docker:
@@ -11,19 +14,29 @@ services:
       - ./docker/server/php/php.ini:/usr/local/etc/php/conf.d/extra-php-config.ini
     ports:
       - 9000:80
+    networks:
+      - laravel_docker
   
   mysql_db:
     image: mysql:latest
     restart: always
+    command: ['mysqld', '--default-authentication-plugin=mysql_native_password']
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
     ports:
       - ${DB_PORT}:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/db/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     healthcheck:
       test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
       interval: 5s
       retries: 5
+    networks:
+      - laravel_docker
   
   phpmyadmin:
     image: phpmyadmin:latest
@@ -33,4 +46,12 @@ services:
       - PMA_ARBITRARY=1
       - UPLOAD_LIMIT=300M
       - MAX_EXECUTION_TIME=300
+    volumes:
+      - php_admin_data:/var/www/html
+    networks:
+      - laravel_docker
+
+volumes:
+    mysql_data:
+    php_admin_data:
     
