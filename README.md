@@ -5,6 +5,7 @@
 Requirements
 ------------
 - Docker
+- Make
 
 PHP and MySQL do not need to be installed to run the software locally
 
