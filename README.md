@@ -1,4 +1,4 @@
-# Laravel APP + MYSQL + PHP-MYADMIN WITH DOCKER SETUP
+# Laravel APP + MYSQL + PHP-MYADMIN WITH DOCKER SETUP (For linux user)
 
 
 
