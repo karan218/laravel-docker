@@ -26,7 +26,7 @@ cp .env.docker .env
 ```bash
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
-DB_PASSWORD=you_mysql_root_password
+DB_PASSWORD=your_mysql_root_password
 MYSQL_ROOT_PASSWORD=you_mysql_root_password
 ```
 
@@ -41,12 +41,12 @@ make setup
 make folder-permission
 ```
 
-6. Update following details in src/.env files according to yours root .env files
+6. Update following details in src/.env files according to root .env files
 ```bash
 DB_HOST=mysql_db
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
-DB_PASSWORD=you_mysql_root_password
+DB_PASSWORD=your_mysql_root_password
 MYSQL_ROOT_PASSWORD=you_mysql_root_password
 ```
 
