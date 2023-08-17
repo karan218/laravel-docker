@@ -26,7 +26,7 @@ cp .env.docker .env
 ```bash
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
-DB_PASSWORD=your_mysql_root_password
+DB_PASSWORD=Same_as_your_mysql_root_password
 MYSQL_ROOT_PASSWORD=your_mysql_root_password
 ```
 
@@ -46,7 +46,7 @@ make folder-permission
 DB_HOST=mysql_db
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
-DB_PASSWORD=your_mysql_root_password
+DB_PASSWORD=Same_as_your_mysql_root_password
 MYSQL_ROOT_PASSWORD=your_mysql_root_password
 ```
 
