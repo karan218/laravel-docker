@@ -27,7 +27,7 @@ cp .env.docker .env
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
 DB_PASSWORD=your_mysql_root_password
-MYSQL_ROOT_PASSWORD=you_mysql_root_password
+MYSQL_ROOT_PASSWORD=your_mysql_root_password
 ```
 
 4. Run the following commands to setup docker enviorment
@@ -47,7 +47,7 @@ DB_HOST=mysql_db
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
 DB_PASSWORD=your_mysql_root_password
-MYSQL_ROOT_PASSWORD=you_mysql_root_password
+MYSQL_ROOT_PASSWORD=your_mysql_root_password
 ```
 
 7. Run the following commands to run migrations & seeders
